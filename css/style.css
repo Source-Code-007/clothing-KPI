@@ -1,0 +1,852 @@
+/* Default CSS */
+img{
+    max-width: 100%;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+#pre-loader{
+    height: 100vh;
+    width: 100%;
+    background: #1b1941 url(../img/preloader1.gif) center center no-repeat;
+    background-size: 50%;
+    position: fixed;
+    z-index: 9999;
+}
+
+/* This font for title */
+h1, h2, h3, h4, span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+a{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+/* This font for subtitle, paragraph, span and a */
+h5, h6, p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+/* Fixed top */
+.top-btn {
+    background-color: #ff45457c;
+    color: #fff;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    display: inline-block;
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    z-index: 1000;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    transition: .5s;
+}
+.top-btn:hover{
+    background-color: #ff4545;
+    padding-top: 5px;
+}
+
+
+/* Now start custom CSS */
+/* Navbar/Header */
+.navbar {
+        background-color: #fff;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+.navbar-brand{
+    padding: 0;
+}
+.navbar img{
+    max-width: 120px;
+}
+.navbar ul{
+    margin-left: auto;
+    position: relative;
+}
+.navbar ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 15px 20px;
+    position: relative;
+}
+.navbar ul li::after{
+    content: '';
+    height: 2px;
+    width: 10%;
+    background-color: #ff4545;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    visibility: hidden;
+    transition: .5s;
+    transition-timing-function: ease-in;
+    opacity: 0;
+}
+.navbar ul li:hover::after{
+    visibility: visible;
+    width: calc(100% - 40px);
+    opacity: 1;
+}
+
+.navbar ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #000000cf;
+    font-size: 18px;
+    transition: .5s;
+}
+.navbar ul li:first-child a,  .navbar ul li:hover > a{
+    color: #ff4545;
+}
+.navbar ul ul li:first-child a{
+    color: #000000cf;
+}
+.navbar ul ul li:hover:first-child a{
+    color: #ff4545;
+}
+/* Dropdown Menu */
+.navbar ul ul{
+    width: 250px;
+    position: absolute;
+    top: 130%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    padding: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s;
+    transition-timing-function: ease-in-out;
+}
+.navbar ul ul li{
+    display: block;
+}
+.navbar ul ul li a{
+    display: block;
+}
+.navbar ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 100%;
+}
+.navbar ul ul li:hover a{
+    letter-spacing: 2px;
+}
+
+
+.icon-area{
+    margin-left: 50px;
+    position: relative;
+}
+.icon-area span{
+    margin: 0 13px;
+    font-size: 20px;
+}
+.icon-area span a{
+    color: #000000cf;
+    transition: .5s;
+}
+.icon-area span:hover a{
+    color: #ff4545;
+}
+
+
+
+/* Carousel/Slider section */
+/* carousel-item 1,2,3  class use ---- cione, citwo, cithree */
+.carousel-inner{
+    height: 92vh;
+}
+.carousel-item{
+    position: relative;
+}
+.cione .white-logo{
+    position: absolute;
+    top: 40vh;
+    left: 0;
+    right: 0;
+    width: 180px;
+    margin: auto;
+    animation: top 1.2s linear;
+}
+@keyframes top {
+    0%{
+        top: 10vh;
+        opacity: 0;
+    }
+    25%{
+        top: 10vh;
+        opacity: 0;
+    }
+    50%{
+        top: 20vh;
+        opacity: .2;
+    }
+    75%{
+        top: 30vh;
+        opacity: .3;
+    }
+    100%{
+        top: 40vh;
+        opacity: 1;
+    }
+}
+
+.cione h3 {
+    position: absolute;
+    top: 60vh;
+    left: 0;
+    right: 0;
+    color: #fff;
+    width: 600px;
+    margin: auto;
+    text-align: center;
+    text-transform: capitalize;
+    animation: down 1.2s linear;
+}
+@keyframes down {
+    0%{
+        top: 90vh;
+        opacity: 0;
+    }
+    25%{
+        top: 90vh;
+        opacity: 0;
+    }
+    50%{
+        top: 80vh;
+        opacity: .2;
+    }
+    75%{
+        top: 70vh;
+        opacity: .3;
+    }
+    100%{
+        top: 60vh;
+        opacity: 1;
+    }
+}
+
+.citwo{
+    position: relative;
+}
+.citwo .citwo-item{
+    position: absolute;
+    top: 30vh;
+    left: 220px;
+    width: 450px;
+}
+.citwo-item h6{
+    font-weight: 600;
+    color: #000000cf;
+}
+.citwo-item h3 {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.citwo-item h3 .spanone {
+    color: #ff4545;
+    position: relative;
+    animation: h3spanone 1.3s .2s linear;
+}
+@keyframes h3spanone{
+    0%{
+        left: 100px;
+        opacity: 0;
+    }
+    25%{
+        left: 70px;
+        opacity: .1;
+    }
+    50%{
+        left: 50px;
+        opacity: .2;
+    }
+    75%{
+        left: 30px;
+        opacity: .4;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+
+}
+.citwo-item h3 .spantwo{
+    position: relative;
+    animation: h3spantwo 1.3s linear;
+    animation-delay: .2s;
+}
+@keyframes h3spantwo {
+    0%{
+        left: -100px;
+        opacity: 0;
+    }
+    25%{
+        left: -70px;
+        opacity: .1;
+    }
+    50%{
+        left: -50px;
+        opacity: .2;
+    }
+    75%{
+        left: -30px;
+        opacity: .4;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+    
+}
+
+.citwo-item p {
+    color: #000000cf;
+    font-size: 18px;
+    margin: 20px 0;
+}
+.common-btn {
+    text-decoration: none;
+    color: #ddd;
+    background: #283f63;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    transition: .5s;
+}
+.common-btn:hover{
+    background: #ff4545;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+
+.cithree{
+    position: relative;
+}
+.cithree img{
+    position: relative;
+    bottom: 75px;
+    left: 0;
+}
+.cithree .cithree-item {
+    position: absolute;
+    top: 40vh;
+    left: 150px;
+    z-index: 1;
+}
+.cithree .cithree-item h3{
+    color: #ff4545;
+    font-size: 35px;
+    margin-bottom: 50px;
+    animation: opacity-animation 2s linear;
+    animation-delay: .2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+@keyframes opacity-animation {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: .1;
+    }
+    50%{
+        opacity: .4;
+    }
+    75%{
+        opacity: .6;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.cithree .cithree-item .input-group input {
+    padding: 15px 30px;
+    border: 4px solid #283f63;
+}
+.cithree .cithree-item .input-group button{
+    color: #fff;
+    background-color: #283f63;
+    border: 4px solid #283f63;
+    transition: .5s;
+}
+.cithree .cithree-item .input-group button:hover {
+    background-color: #ff4545;
+    color: #fff;
+    border: 4px solid #283f63;
+}
+.cithree .cithree-item .input-group{
+    animation: btn-grp 2s linear;
+    animation-delay: .1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes btn-grp{
+    0%{
+        width: 0;
+        opacity: 0;
+    }
+    25%{
+        width: 25%;
+        opacity: 0;
+    }
+    50%{
+        width: 50%;
+        opacity: 0;
+    }
+    75%{
+        width: 75%;
+        opacity: .3;
+    }
+    100%{
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+/* Brand section */
+.common-header{
+    position: relative;
+}
+.common-header .common-header-h3 {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 100px;
+    opacity: 0.1;
+}
+
+/* Best selling Section */
+.best-selling, .product-item-common{
+    /* background: linear-gradient(#ff454500, #ff454520, #ff454541, #ff454520, #ff454500); */
+    background: linear-gradient( #283f6300, #283f6324, #283f6350, #283f6324, #283f6300) ;
+}
+.product-header {
+    background-color: #283f63;
+    color: #fff;
+    border-radius: 0 50px 50px 0;
+    display: inline-block;
+    position: relative;
+    padding: 10px 60px 10px 120px;
+    margin: 25px 0;
+}
+
+.product-item-common .card-img{
+    position: relative;
+    overflow: hidden;
+    height: 285px;
+}
+.product-item-common .card-img img{
+    transition: 1s;
+}
+.product-item-common .card-img .common-wishlist-btn {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    background: #ff4545;
+    color: #fff;
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: .5s;
+    transition-timing-function: linear;
+    opacity: 0;
+    visibility: hidden;
+    font-weight: bold;
+}
+.product-item-common .card:hover .common-wishlist-btn{
+    bottom: 30px;
+    opacity: 1;
+    visibility: visible;
+}
+.product-item-common .card:hover img{
+    transform: scale(1.1);
+}
+.product-item-common .common-wishlist-btn:hover{
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    background-color: #283f63;
+}
+
+.product-item-common .card-body h3{
+    font-size: 22px;
+}
+.product-item-common .card-body h5 {
+    color: #000000cf;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.product-item-common .star-area{
+    margin: 10px 0;
+}
+.product-item-common .star-area span{
+    color: #ff4545;
+}
+.product-item-common .price-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-item-common .price-area h4, .product-item-common .price-area h5{
+    color: 	#283f63;
+    margin: 0;
+}
+.product-item-common .price-area h5{
+    text-decoration: line-through;
+}
+.product-item-common .price-area a {
+    color: #283f63;
+    background-color: rgba(0, 0, 0, 0.052);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 21px;
+    transition: .5s;
+}
+.product-item-common .price-area a:hover{
+    background-color: #fff;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+/* Collection section */
+.collection-main .common-header-h3{
+    top: -50px;
+}
+.collection-1{
+    display: flex;
+    justify-content: space-between;
+}
+.collection-common{
+    flex: 1 1 auto;
+    position: relative;
+}
+.collection-common h4 {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ff454594;
+    color: #fff;
+    text-align: center;
+    line-height: 95vh;
+    font-size: 35px;
+    visibility: hidden;
+    transition: .7s;
+    transition-timing-function: ease-in-out;
+    opacity: 0;
+}
+.collection-common:hover h4{
+    visibility: visible;
+    opacity: 1;
+    line-height: 100vh;
+}
+
+.collection-common img{
+    width: 100%;
+    height: 100%;
+}
+.collection-2{
+    display: flex;
+    justify-content: space-between;
+}
+.collection-2 .collection-common{
+    flex: 1 1 33.3%;
+}
+.collection-2 .collection-common h4{
+    line-height: 70vh;
+}
+
+/* Feaured Section */
+.featured-items-main{
+    background: linear-gradient( #283f6300, #283f6324, #283f6350, #283f6324, #283f6300) ;
+}
+.featured-items-intro h3{
+    font-size: 45px;
+}
+.featured-items-intro h5 {
+    color: #474747f7;
+    margin: 20px 0;
+}
+.featured-items-main .product-item-common{
+    margin: 15px 0;
+}
+
+/* Discount Section */
+.discount{
+    background: url(../img/accessories-collection.png) no-repeat;
+     background-size: cover;
+     height: 85vh;
+     background-position: top center;
+     display: flex;
+     align-items: center;
+     color: #fff;
+     position: relative;
+     z-index: 2;
+    }
+.discount::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #283f636b;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transition: .5s;
+}
+.discount:hover::after{
+    background: rgb(0 0 0 / 36%);
+}
+.discount:hover .common-btn{
+    background: #ff4545;
+}
+.discount h5{
+    font-size: 25px;
+}
+.discount h3 {
+    font-size: 35px;
+    margin: 25px 0;
+}
+.discount span{
+    color: #ff4545;
+}
+
+/* Another Section */
+.another-collection{
+    background: linear-gradient( #283f6300, #283f6324, #283f6350, #283f6324, #283f6300) ;
+    position: relative;
+}
+.another-collection .another-item{
+    height: 400px;
+    position: relative;
+}
+.another-collection .another-item img{
+    width: 100%;
+    height: 100%;
+}
+.another-collection .another-item .another-inner{
+    position: absolute;
+    top: 150px;
+    left: 60px;
+    color: #fff;
+}
+.another-collection .another-item::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.406);
+    transition: .5s;
+    opacity: 0;
+
+}
+.another-collection .another-item .another-inner h5 span{
+    color: #ff4545;
+    transition: .5s;
+}
+.another-item:hover .common-btn{
+    background: #ff4545;
+}
+.another-collection .another-item:hover h5 span{
+    color: #283f63;
+}
+/* Newsletters Section */
+.newsletter{
+    background: url(./../img/newsletter.bg.jpg) no-repeat fixed;
+    background-size: cover;
+    background-position: top center;
+    color: #fff;
+    padding: 80px 0 !important;
+}
+.newsletter .input-group input {
+    padding: 15px 30px;
+    border: 4px solid #283f63;
+}
+.newsletter .input-group button{
+    color: #fff;
+    background-color: #283f63;
+    border: 4px solid #283f63;
+    transition: .5s;
+}
+.newsletter .input-group button:hover {
+    background-color: #ff4545;
+    color: #fff;
+    border: 4px solid #283f63;
+}
+
+/* Footer */
+.footer{
+    background: #111111;
+}
+.footer-top{
+    color: #fff;
+
+}
+.footer-top img{
+    width: 300px;
+}
+.footer-top-right-men a, .footer-top-right-women a{
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 5px 0;
+        transition: .5s;
+}
+.footer-top-right-men a:hover, .footer-top-right-women a:hover{
+    color: #ff4545;
+    letter-spacing: 1px;
+}
+
+.footer-about{
+    color: #fff;
+}
+.footer-about p{
+    font-size: 18px;
+}
+
+
+.footer-icon{
+    color: #fff;
+    font-size: 18px;
+}
+ .footer-icon a{
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: .5s;
+    font-size: 18px;
+}
+.footer-icon a:hover{
+    color: #ff4545;
+    letter-spacing: 1px;
+}
+
+.footer-bottom{
+    color: #fff;
+    padding: 25px 0;
+    box-shadow: 0px -4px 3px #ffffff0a;
+}
+.footer-bottom h5{
+    color: #838282;
+}
+.footer-bottom h5 span{
+    color: #fff;
+}
+
+
+
+
+
+/* Another page/Under construction */
+.under-construction-main{
+    height: 100vh;
+    width: auto;
+    background: url(./../img/under-construction.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.under-construction-main::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.611);
+}
+.under-construction-inner{
+    text-align: center;
+    color: #fff;
+    z-index: 10;
+}
+.under-construction-inner h5{
+    font-size: 25px;
+    margin: 130px 0;
+    position: relative;
+    color: #ffffffbf;
+}
+.under-construction-inner h5::before {
+    content: '';
+    height: 2px;
+    width: 50px;
+    background: #ffffffbf;
+    position: absolute;
+    top: 13px;
+    left: 10px;
+}
+.under-construction-inner h5::after {
+    content: '';
+    height: 2px;
+    width: 50px;
+    background: #ffffffbf;
+    position: absolute;
+    top: 13px;
+    right: 10px;
+}
+.under-construction-inner h3{
+    font-size: 50px;
+}
+.under-construction-inner h6{
+    padding: 100px 0;
+    text-align: right;
+    font-size: 22px;
+}
+.under-construction-inner .common-btn{
+    margin-left: 50px;
+    background: #ff4545;
+}
+.under-construction-inner span{
+    position: relative;
+    animation: construction-span 1.3s linear infinite;
+    opacity: 0;
+    color: #ff4545;
+}
+@keyframes construction-span {
+    0%{
+        left: 0;
+        opacity: 0;
+        color: #fff;
+    }
+    25%{
+        left: 7px;
+        color: #fff;
+    }
+    50%{
+        left: 15px;
+    }
+    75%{
+        left: 25px;
+    }
+    100%{
+        left: 35px;
+        opacity: 1;
+    }
+}
